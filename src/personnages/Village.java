@@ -70,6 +70,12 @@ public class Village {
 		village.afficherVillageois();
 		village.ajouterHabitant(new Gaulois("Obélix", 25));
 		village.afficherVillageois();
+		village.ajouterHabitant(new Gaulois("Obélix", 25));
+		village.afficherVillageois();
+		village.ajouterHabitant(new Gaulois("Obélix", 25));
+		village.afficherVillageois();
+		village.ajouterHabitant(new Gaulois("Obélix", 25));
+		village.afficherVillageois();
 
 	}
 }
