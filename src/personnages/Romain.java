@@ -10,28 +10,29 @@ public class Romain {
 	}
 
 	public String getNom() {
-		return nom;
+		return this.nom;
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(this.prendreParole() + "« " + texte + "»");
 	}
 
 	private String prendreParole() {
-		return "Le romain " + nom + " : ";
+		return "Le romain " + this.nom + " : ";
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		force -= forceCoup;
-		if (force > 0) {
-			parler("Aïe");
+		this.force -= forceCoup;
+		if (this.force > 0) {
+			this.parler("Aïe");
 		} else {
-			parler("J'abandonne...");
+			this.parler("J'abandonne...");
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		Romain lou = new Romain("lou",2);
+		Romain lou = new Romain("lou", 2);
+		lou.parler("nponnoonnonno");
 		lou.parler("nponnoonnonno");
 		lou.recevoirCoup(1);
 	}
