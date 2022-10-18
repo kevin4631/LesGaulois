@@ -1,14 +1,12 @@
 package personnages;
 
-public class Romain {
+public class Romain2 {
 	private String nom;
-	private String texte;
 	private int force;
 	private int nbEquipement = 0;
 	private Equipement equipements[] = new Equipement[2];
 
-	public Romain(String nom, int force) {
-		assert (force > 0);
+	public Romain2(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 	}
@@ -26,17 +24,12 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		int svForce = this.force;
-		assert (this.force > 0);
-
 		this.force -= forceCoup;
 		if (this.force > 0) {
 			this.parler("Aïe");
 		} else {
 			this.parler("J'abandonne...");
-
 		}
-		assert (svForce > this.force);
 	}
 
 	public void sEquiper(Equipement equipement) {
@@ -59,7 +52,7 @@ public class Romain {
 	}
 
 	public static void main(String[] args) {
-		Romain lou = new Romain("lou", 6);
+		Romain2 lou = new Romain2("lou", 6);
 		lou.parler("non");
 		lou.recevoirCoup(1);
 
