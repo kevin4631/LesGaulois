@@ -11,7 +11,11 @@ public class Romain {
 		this.nom = nom;
 		this.force = force;
 	}
-
+	
+	public int getForce() {
+		return this.force;
+	}
+	
 	public String getNom() {
 		return this.nom;
 	}
@@ -85,12 +89,14 @@ public class Romain {
 		}
 		this.parler(texte);
 		forceCoup -= resistanceEquipement;
+		if (forceCoup < 0)
+			forceCoup = 0;
 		return forceCoup;
 	}
 
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[this.nbEquipement];
-		System.out.println("L'équipement de " + this.nom + " s'envole sous la force du coup.");
+		System.out.println("L'equipement de " + this.nom + " s'envole sous la force du coup.");
 
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < this.nbEquipement; i++) {

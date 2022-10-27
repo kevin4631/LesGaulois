@@ -22,14 +22,14 @@ public class Village {
 
 	public Gaulois trouverHabitant(int numVillageois) {
 		if (numVillageois >= this.nbVillageoisMaximum) {
-			System.err.println("ERREUR : numVillageois est > Ã  villageois.length.");
+			System.err.println("ERREUR : numVillageois est > à villageois.length.");
 			System.exit(1);
 		}
 		return this.villageois[numVillageois];
 	}
 
 	public void afficherVillageois() {
-		System.out.println("Dans le village " + this.getNom() + "vivent de lÃ©gendaires gaulois :");
+		System.out.println("Dans le village " + this.getNom() + "vivent de légendaires gaulois :");
 
 		for (int i = 0; i < this.nbVillageois; i++) {
 			System.out.println("- " + this.villageois[i].getNom());
@@ -45,7 +45,7 @@ public class Village {
 	}
 
 	public static void main(String[] args) {
-		Village village = new Village("Village des IrrÃ©ductibles", 30);
+		Village village = new Village("Village des Irréductibles", 30);
 
 		// Gaulois gaulois = village.trouverHabitant(30);
 		/*
@@ -54,7 +54,7 @@ public class Village {
 		 */
 
 		village.setChef(new Chef("Abraracourcix", 6, village));
-		village.ajouterHabitant(new Gaulois("AstÃ©rix", 8));
+		village.ajouterHabitant(new Gaulois("Astérix", 8));
 
 		// Gaulois gaulois = village.trouverHabitant(1);
 		// System.out.println(gaulois);
@@ -64,7 +64,7 @@ public class Village {
 		 *
 		 **/
 
-		village.ajouterHabitant(new Gaulois("ObÃ©lix", 25));
+		village.ajouterHabitant(new Gaulois("Obélix", 25));
 		village.afficherVillageois();
 	}
 }
