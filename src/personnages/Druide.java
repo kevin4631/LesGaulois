@@ -12,44 +12,45 @@ public class Druide {
 		this.nom = nom;
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
-		parler("Bonjour, je suis le druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin + 
-				" ‡† " + effetPotionMax + ".");
+		this.parler("Bonjour, je suis le druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin
+				+ " √† " + effetPotionMax + ".");
 	}
 
 	public String getNom() {
-		return nom;
+		return this.nom;
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "´ " + texte + " ª");
+		System.out.println(this.prendreParole() + "¬´ " + texte + " ¬ª");
 	}
 
 	private String prendreParole() {
-		return "Le druide " + nom + " : ";
+		return "Le druide " + this.nom + " : ";
 	}
-	
-	public void preparerPotion () {
+
+	public void preparerPotion() {
 		Random r = new Random();
-		this.forcePotion = r.nextInt(effetPotionMin, effetPotionMax+1);
-		
-		if (forcePotion > 7) {
-			parler("j'ai prÈparÈ une super potion de force " + forcePotion);
+		this.forcePotion = r.nextInt(this.effetPotionMin, this.effetPotionMax + 1);
+
+		if (this.forcePotion > 7) {
+			this.parler("j'ai pr√©par√© une super potion de force " + this.forcePotion);
 		} else {
-			parler("je n'ai pas trouvÈ tous les ingrÈdients, ma potion est seulement de force " + forcePotion);
+			this.parler(
+					"je n'ai pas trouv√© tous les ingr√©dients, ma potion est seulement de force " + this.forcePotion);
 		}
 	}
-	
+
 	public void booster(Gaulois gaulois) {
-		if ( gaulois.getNom().equals("ObÈlix") ) {
-			parler("Non, ObÈlix !... T n'auras pas de potion magique!");
+		if (gaulois.getNom().equals("Ob√©lix")) {
+			this.parler("Non, Ob√©lix !... T n'auras pas de potion magique!");
 		} else {
-			gaulois.boirePotion(forcePotion);
+			gaulois.boirePotion(this.forcePotion);
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		Druide panoramix = new Druide("Paronamix",5,10);
-		
+		Druide panoramix = new Druide("Paronamix", 5, 10);
+
 		panoramix.preparerPotion();
 		panoramix.preparerPotion();
 		panoramix.preparerPotion();

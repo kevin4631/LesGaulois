@@ -18,7 +18,7 @@ public class Gaulois {
 	}
 
 	public void parler(String texte) {
-		System.out.println(this.prendreParole() + "« " + texte + " »");
+		System.out.println(this.prendreParole() + "Â« " + texte + " Â»");
 	}
 
 //	private String prendreParole() {
@@ -49,7 +49,19 @@ public class Gaulois {
 
 	public void boirePotion(int forcePdruide) {
 		this.effetPotion = forcePdruide;
-		this.parler("Merci Druide, je sens que ma force est " + forcePdruide + " fois décuplée.");
+		this.parler("Merci Druide, je sens que ma force est " + forcePdruide + " fois dÃ©cuplÃ©e.");
+	}
+
+	public void faireUneDonnation(Musee musee) {
+		if (this.nbTrophees > 0) {
+			this.parler("Je donne au musee tous mes trophees :");
+			for (int i = 0; i < this.nbTrophees; i++) {
+				this.parler(this.trophees[i].toString());
+				musee.DonnerTrophees(this, this.trophees[i]);
+			}
+			this.nbTrophees = 0;
+		}
+
 	}
 
 	public static void main(String[] args) {

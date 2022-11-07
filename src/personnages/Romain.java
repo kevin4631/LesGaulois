@@ -11,17 +11,17 @@ public class Romain {
 		this.nom = nom;
 		this.force = force;
 	}
-	
+
 	public int getForce() {
 		return this.force;
 	}
-	
+
 	public String getNom() {
 		return this.nom;
 	}
 
 	public void parler(String texte) {
-		System.out.println(this.prendreParole() + "« " + texte + " »");
+		System.out.println(this.prendreParole() + "Â« " + texte + " Â»");
 	}
 
 	private String prendreParole() {
@@ -49,7 +49,7 @@ public class Romain {
 		assert this.force > 0;
 
 		int oldForce = this.force;
-		forceCoup = calculResistanceEquipement(forceCoup);
+		forceCoup = this.calculResistanceEquipement(forceCoup);
 		this.force -= forceCoup;
 
 		// if (force > 0) {
@@ -58,7 +58,7 @@ public class Romain {
 		// equipementEjecte = ejecterEquipement();
 		// parler("J'abandonne...");
 		// }
-		
+
 		if (this.force == 0) {
 			this.parler("AÃ¯e");
 		} else {
@@ -76,7 +76,7 @@ public class Romain {
 		int resistanceEquipement = 0;
 
 		if (this.nbEquipement != 0) {
-			texte += "\nMais heureusement, grace à  mon équipement sa force est diminué de ";
+			texte += "\nMais heureusement, grace Ã  mon Ã©quipement sa force est diminuÃ© de ";
 			for (int i = 0; i < this.nbEquipement; i++) {
 				if (this.equipements[i] != null && this.equipements[i].equals(Equipement.BOUCLIER)) {
 					resistanceEquipement += 8;
@@ -113,17 +113,17 @@ public class Romain {
 
 		switch (this.nbEquipement) {
 		case 2:
-			System.out.println("Le soldat " + this.getNom() + " est déja  bien protégé !");
+			System.out.println("Le soldat " + this.getNom() + " est dÃ©ja bien protÃ©gÃ© !");
 			break;
 
 		case 1:
 			if (this.equipements[0] == equipement) {
-				System.out.println("Le soldat " + this.getNom() + " posséde déja  un " + equipement.toString() + " !");
+				System.out.println("Le soldat " + this.getNom() + " possÃ©de dÃ©ja un " + equipement.toString() + " !");
 				break;
 			}
 		default:
 			this.equipements[this.nbEquipement++] = equipement;
-			System.out.println("Le soldat " + this.getNom() + " séquipe avec un " + equipement.toString());
+			System.out.println("Le soldat " + this.getNom() + " sÃ©quipe avec un " + equipement.toString());
 			break;
 		}
 	}
