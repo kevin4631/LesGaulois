@@ -1,11 +1,13 @@
-package personnages;
+package personnages.objets;
+
+import personnages.Gaulois;
 
 public class Trophee {
 
 	private Gaulois gaulois;
 	private Equipement Equipement;
 
-	public Trophee(Gaulois gaulois, personnages.Equipement equipement) {
+	public Trophee(Gaulois gaulois, personnages.objets.Equipement equipement) {
 		super();
 		this.gaulois = gaulois;
 		this.Equipement = equipement;

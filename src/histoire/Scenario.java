@@ -1,10 +1,9 @@
 package histoire;
 
 import personnages.Druide;
-import personnages.Equipement;
 import personnages.Gaulois;
 import personnages.Romain;
-//import villagegaulois.Musee;
+import personnages.objets.Equipement;
 
 public class Scenario {
 

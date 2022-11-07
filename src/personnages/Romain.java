@@ -1,5 +1,7 @@
 package personnages;
 
+import personnages.objets.Equipement;
+
 public class Romain {
 	private String nom;
 	private int force;

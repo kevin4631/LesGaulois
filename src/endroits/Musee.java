@@ -1,4 +1,8 @@
-package personnages;
+package endroits;
+
+import personnages.Gaulois;
+import personnages.objets.Equipement;
+import personnages.objets.Trophee;
 
 public class Musee {
 	private Trophee[] trophees = new Trophee[200];

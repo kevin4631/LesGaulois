@@ -1,4 +1,4 @@
-package personnages;
+package personnages.objets;
 
 public enum Equipement {
 

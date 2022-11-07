@@ -1,5 +1,8 @@
 package personnages;
 
+import endroits.Musee;
+import personnages.objets.Equipement;
+
 public class Gaulois {
 
 	private String nom;

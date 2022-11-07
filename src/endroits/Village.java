@@ -1,4 +1,7 @@
-package personnages;
+package endroits;
+
+import personnages.Chef;
+import personnages.Gaulois;
 
 public class Village {
 
